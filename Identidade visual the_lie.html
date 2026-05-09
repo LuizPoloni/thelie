@@ -1,0 +1,1584 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thê-lie Cerâmico — Brand Identity</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300&family=Jost:wght@300;400;500&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --cream: #F5ECD7;
+            --cream-light: #FAF4E8;
+            --terra: #8B4513;
+            --terra-mid: #A0522D;
+            --terra-light: #C47848;
+            --terra-pale: #D4956A;
+            --gold: #B8860B;
+            --gold-light: #C9A84C;
+            --brown-dark: #3D1C0A;
+            --brown-mid: #5C2E0A;
+            --olive: #6B6B3A;
+            --olive-light: #8B8B4A;
+            --black: #1A0A00;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #1A0A00;
+            font-family: 'Jost', sans-serif;
+            color: var(--brown-dark);
+        }
+
+        .page {
+            width: 1200px;
+            margin: 0 auto;
+            background: var(--cream);
+            position: relative;
+        }
+
+        /* ── COVER ── */
+        .cover {
+            background: var(--cream-light);
+            height: 320px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 80px;
+            border-bottom: 3px solid var(--terra);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cover::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse at 70% 50%, rgba(164, 82, 45, .08) 0%, transparent 70%);
+        }
+
+        .cover-text {
+            z-index: 1;
+        }
+
+        .cover-label {
+            font-family: 'Jost', sans-serif;
+            font-weight: 300;
+            letter-spacing: .35em;
+            font-size: 11px;
+            color: var(--terra-light);
+            text-transform: uppercase;
+            margin-bottom: 12px;
+        }
+
+        .cover-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 52px;
+            color: var(--brown-dark);
+            line-height: 1;
+        }
+
+        .cover-title span {
+            color: var(--terra);
+            font-style: italic;
+        }
+
+        .cover-sub {
+            font-family: 'Jost', sans-serif;
+            font-weight: 300;
+            letter-spacing: .25em;
+            font-size: 13px;
+            color: var(--terra-mid);
+            margin-top: 8px;
+            text-transform: uppercase;
+        }
+
+        .cover-brand-desc {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 16px;
+            color: var(--terra-mid);
+            margin-top: 18px;
+            font-style: italic;
+            max-width: 360px;
+            line-height: 1.6;
+        }
+
+        .cover-decor {
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 4px;
+        }
+
+        .cover-circle {
+            width: 220px;
+            height: 220px;
+            border-radius: 50%;
+            border: 3px solid var(--terra);
+            background: var(--cream);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            box-shadow: inset 0 0 40px rgba(164, 82, 45, .1);
+            position: relative;
+        }
+
+        .cover-circle::before {
+            content: '';
+            position: absolute;
+            inset: 6px;
+            border-radius: 50%;
+            border: 1px solid rgba(164, 82, 45, .35);
+        }
+
+        .cover-circle-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 28px;
+            color: var(--brown-dark);
+            text-align: center;
+            line-height: 1.1;
+        }
+
+        .cover-circle-sub {
+            font-family: 'Jost', sans-serif;
+            letter-spacing: .2em;
+            font-size: 9px;
+            color: var(--terra);
+            text-transform: uppercase;
+            margin-top: 4px;
+        }
+
+        /* ── SECTION HEADER ── */
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 32px;
+        }
+
+        .section-num {
+            font-family: 'Playfair Display', serif;
+            font-size: 13px;
+            color: var(--terra-light);
+            font-style: italic;
+            min-width: 28px;
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 22px;
+            color: var(--brown-dark);
+            font-weight: 600;
+        }
+
+        .section-line {
+            flex: 1;
+            height: 1px;
+            background: linear-gradient(to right, var(--terra-mid), transparent);
+            opacity: .4;
+        }
+
+        /* ── SECTION BLOCK ── */
+        .section {
+            padding: 56px 80px;
+            border-bottom: 1px solid rgba(164, 82, 45, .15);
+        }
+
+        .section:nth-child(even) {
+            background: rgba(245, 236, 215, .5);
+        }
+
+        /* ── LOGOS ── */
+        .logos-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 24px;
+        }
+
+        .logo-card {
+            background: var(--cream-light);
+            border: 1px solid rgba(164, 82, 45, .2);
+            border-radius: 4px;
+            padding: 40px 24px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            position: relative;
+        }
+
+        .logo-card-label {
+            font-family: 'Jost', sans-serif;
+            font-size: 9px;
+            letter-spacing: .3em;
+            color: var(--terra-light);
+            text-transform: uppercase;
+            position: absolute;
+            top: 12px;
+            left: 16px;
+        }
+
+        /* Logo circular SVG */
+        .logo-main-svg {
+            width: 180px;
+            height: 180px;
+        }
+
+        .logo-horiz-svg {
+            width: 260px;
+            height: 90px;
+        }
+
+        .logo-icon-svg {
+            width: 100px;
+            height: 100px;
+        }
+
+        /* ── DARK VARIANT ── */
+        .logo-card.dark-bg {
+            background: var(--brown-dark);
+            border-color: rgba(164, 82, 45, .4);
+        }
+
+        /* ── PALETTE ── */
+        .palette-row {
+            display: flex;
+            gap: 0;
+            border-radius: 6px;
+            overflow: hidden;
+            margin-bottom: 20px;
+            height: 100px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, .12);
+        }
+
+        .swatch {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 10px;
+            position: relative;
+            cursor: default;
+        }
+
+        .swatch-name {
+            font-size: 8px;
+            letter-spacing: .15em;
+            text-transform: uppercase;
+            font-weight: 500;
+            margin-bottom: 2px;
+        }
+
+        .swatch-hex {
+            font-size: 10px;
+            font-family: 'Jost', sans-serif;
+            font-weight: 300;
+        }
+
+        .light-text .swatch-name,
+        .light-text .swatch-hex {
+            color: rgba(255, 255, 255, .85);
+        }
+
+        .dark-text .swatch-name,
+        .dark-text .swatch-hex {
+            color: rgba(29, 12, 0, .7);
+        }
+
+        /* ── TYPOGRAPHY ── */
+        .typo-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 32px;
+        }
+
+        .typo-card {
+            background: var(--cream-light);
+            border: 1px solid rgba(164, 82, 45, .15);
+            padding: 32px;
+            border-radius: 4px;
+        }
+
+        .typo-role {
+            font-size: 9px;
+            letter-spacing: .3em;
+            color: var(--terra-light);
+            text-transform: uppercase;
+            margin-bottom: 12px;
+        }
+
+        .typo-display {
+            font-family: 'Playfair Display', serif;
+            font-size: 42px;
+            color: var(--brown-dark);
+            line-height: 1;
+        }
+
+        .typo-serif {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 28px;
+            color: var(--terra-mid);
+            font-style: italic;
+            line-height: 1.2;
+        }
+
+        .typo-sans {
+            font-family: 'Jost', sans-serif;
+            font-size: 14px;
+            color: var(--brown-mid);
+            font-weight: 300;
+            letter-spacing: .15em;
+            text-transform: uppercase;
+            line-height: 1.6;
+        }
+
+        .typo-meta {
+            margin-top: 16px;
+            font-size: 10px;
+            color: var(--terra-light);
+            letter-spacing: .1em;
+        }
+
+        /* ── ELEMENTS ── */
+        .elements-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+        }
+
+        .elem-card {
+            background: var(--cream-light);
+            border: 1px solid rgba(164, 82, 45, .15);
+            padding: 24px;
+            border-radius: 4px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .elem-label {
+            font-size: 9px;
+            letter-spacing: .25em;
+            color: var(--terra-light);
+            text-transform: uppercase;
+        }
+
+        /* ── APPLICATIONS ── */
+        .apps-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 28px;
+        }
+
+        .app-card {
+            background: var(--cream-light);
+            border: 1px solid rgba(164, 82, 45, .15);
+            border-radius: 6px;
+            overflow: hidden;
+        }
+
+        .app-card-label {
+            padding: 10px 16px;
+            font-size: 9px;
+            letter-spacing: .3em;
+            color: var(--terra-light);
+            text-transform: uppercase;
+            border-bottom: 1px solid rgba(164, 82, 45, .12);
+        }
+
+        .app-card-body {
+            padding: 24px;
+        }
+
+        /* Business card */
+        .biz-card {
+            width: 100%;
+            aspect-ratio: 1.75;
+            background: var(--cream);
+            border: 1.5px solid var(--terra);
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 18px 22px;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 6px 24px rgba(0, 0, 0, .12);
+        }
+
+        .biz-card::before {
+            content: '';
+            position: absolute;
+            top: -30px;
+            right: -30px;
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 20px solid rgba(164, 82, 45, .06);
+        }
+
+        .biz-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 22px;
+            color: var(--brown-dark);
+        }
+
+        .biz-name span {
+            color: var(--terra);
+            font-style: italic;
+        }
+
+        .biz-ceramico {
+            font-family: 'Jost', sans-serif;
+            letter-spacing: .2em;
+            font-size: 7.5px;
+            color: var(--terra);
+            text-transform: uppercase;
+            margin-top: 2px;
+        }
+
+        .biz-sep {
+            width: 40px;
+            height: 1px;
+            background: var(--terra-light);
+        }
+
+        .biz-contact {
+            font-family: 'Jost', sans-serif;
+            font-size: 9px;
+            color: var(--terra-mid);
+            line-height: 1.8;
+        }
+
+        /* Letterhead */
+        .letterhead {
+            background: white;
+            border: 1px solid #e0d0b8;
+            border-radius: 6px;
+            overflow: hidden;
+        }
+
+        .lh-header {
+            background: var(--brown-dark);
+            padding: 20px 28px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .lh-name {
+            font-family: 'Playfair Display', serif;
+            color: var(--cream);
+            font-size: 20px;
+        }
+
+        .lh-name span {
+            color: var(--terra-light);
+            font-style: italic;
+        }
+
+        .lh-sub {
+            font-family: 'Jost', sans-serif;
+            color: var(--terra-pale);
+            letter-spacing: .18em;
+            font-size: 8px;
+            text-transform: uppercase;
+            margin-top: 2px;
+        }
+
+        .lh-body {
+            padding: 20px 28px;
+        }
+
+        .lh-date {
+            font-family: 'Jost', sans-serif;
+            font-size: 9px;
+            color: #999;
+            margin-bottom: 10px;
+        }
+
+        .lh-line {
+            height: 1px;
+            background: #f0e4d0;
+            margin: 8px 0;
+        }
+
+        .lh-text-block {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .lh-text {
+            height: 6px;
+            background: #e8dcc8;
+            border-radius: 3px;
+        }
+
+        .lh-footer {
+            background: var(--terra);
+            padding: 10px 28px;
+            font-family: 'Jost', sans-serif;
+            color: var(--cream);
+            font-size: 9px;
+            letter-spacing: .12em;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        /* Instagram post */
+        .insta-post {
+            aspect-ratio: 1;
+            background: var(--brown-dark);
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 28px;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 6px 24px rgba(0, 0, 0, .18);
+        }
+
+        .insta-post::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at 50% 30%, rgba(164, 82, 45, .3) 0%, transparent 60%);
+        }
+
+        .insta-ring {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            border: 2px solid var(--terra);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            z-index: 1;
+            margin-bottom: 16px;
+        }
+
+        .insta-ring::before {
+            content: '';
+            position: absolute;
+            inset: 6px;
+            border-radius: 50%;
+            border: 1px solid rgba(164, 82, 45, .4);
+        }
+
+        .insta-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 28px;
+            color: var(--cream);
+            text-align: center;
+            line-height: 1;
+        }
+
+        .insta-logo span {
+            color: var(--terra-pale);
+            font-style: italic;
+        }
+
+        .insta-tag {
+            font-family: 'Jost', sans-serif;
+            font-size: 8px;
+            letter-spacing: .25em;
+            color: var(--terra-light);
+            text-transform: uppercase;
+            z-index: 1;
+        }
+
+        .insta-msg {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 18px;
+            color: var(--cream-light);
+            font-style: italic;
+            text-align: center;
+            z-index: 1;
+            margin-top: 8px;
+        }
+
+        /* Label / tag */
+        .label-wrap {
+            display: flex;
+            justify-content: center;
+            padding: 8px 0;
+        }
+
+        .product-label {
+            width: 140px;
+            background: var(--cream);
+            border: 1.5px solid var(--terra);
+            border-radius: 4px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 16px 12px 12px;
+            position: relative;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, .1);
+        }
+
+        .product-label::before {
+            content: '';
+            position: absolute;
+            top: -8px;
+            width: 20px;
+            height: 6px;
+            border-radius: 3px;
+            background: var(--terra);
+        }
+
+        .label-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 18px;
+            color: var(--brown-dark);
+            text-align: center;
+            line-height: 1;
+        }
+
+        .label-name span {
+            color: var(--terra);
+            font-style: italic;
+        }
+
+        .label-sub {
+            font-family: 'Jost', sans-serif;
+            letter-spacing: .18em;
+            font-size: 7px;
+            color: var(--terra-mid);
+            text-transform: uppercase;
+            margin: 4px 0 8px;
+        }
+
+        .label-divider {
+            width: 60px;
+            height: 1px;
+            background: var(--terra-light);
+        }
+
+        .label-loc {
+            font-family: 'Jost', sans-serif;
+            font-size: 8px;
+            color: var(--terra-mid);
+            margin-top: 6px;
+        }
+
+        /* Facade mock */
+        .facade {
+            background: var(--cream);
+            border: 1.5px solid var(--terra);
+            border-radius: 6px;
+            overflow: hidden;
+        }
+
+        .facade-top {
+            background: var(--brown-dark);
+            padding: 14px 20px;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .facade-logo-sm {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            border: 1.5px solid var(--terra);
+            background: var(--cream);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .facade-logo-sm-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 10px;
+            color: var(--brown-dark);
+            text-align: center;
+            line-height: 1.1;
+        }
+
+        .facade-title-area {
+            flex: 1;
+        }
+
+        .facade-name {
+            font-family: 'Playfair Display', serif;
+            color: var(--cream);
+            font-size: 18px;
+        }
+
+        .facade-name span {
+            color: var(--terra-light);
+            font-style: italic;
+        }
+
+        .facade-ceramico {
+            font-family: 'Jost', sans-serif;
+            letter-spacing: .22em;
+            font-size: 8px;
+            color: var(--terra-pale);
+            text-transform: uppercase;
+        }
+
+        .facade-body {
+            padding: 16px 20px;
+            background: var(--cream);
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .facade-tag {
+            padding: 4px 12px;
+            border: 1px solid var(--terra);
+            border-radius: 20px;
+            font-family: 'Jost', sans-serif;
+            font-size: 9px;
+            color: var(--terra-mid);
+            letter-spacing: .1em;
+        }
+
+        .facade-contact-bar {
+            background: var(--terra);
+            padding: 6px 20px;
+            font-family: 'Jost', sans-serif;
+            font-size: 9px;
+            color: var(--cream);
+            display: flex;
+            gap: 20px;
+        }
+
+        /* ── BRAND GUIDE ── */
+        .guide-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+        }
+
+        .guide-card {
+            background: var(--cream-light);
+            border: 1px solid rgba(164, 82, 45, .15);
+            padding: 24px;
+            border-radius: 4px;
+        }
+
+        .guide-card-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 14px;
+            color: var(--brown-dark);
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .guide-dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: var(--terra);
+        }
+
+        .guide-row {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 8px;
+            align-items: center;
+        }
+
+        .guide-thumb {
+            width: 60px;
+            height: 36px;
+            border-radius: 3px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Playfair Display', serif;
+            font-size: 11px;
+            flex-shrink: 0;
+            font-style: italic;
+        }
+
+        .guide-desc {
+            font-family: 'Jost', sans-serif;
+            font-size: 10px;
+            color: var(--terra-mid);
+            line-height: 1.5;
+        }
+
+        .guide-ok {
+            border: 2px solid #6B9B37;
+        }
+
+        .guide-no {
+            border: 2px solid #C0392B;
+            position: relative;
+        }
+
+        .guide-no::after {
+            content: '✕';
+            position: absolute;
+            top: -6px;
+            right: -6px;
+            font-size: 8px;
+            background: #C0392B;
+            color: white;
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            line-height: 1;
+        }
+
+        /* footer strip */
+        .footer-strip {
+            background: var(--brown-dark);
+            padding: 20px 80px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer-name {
+            font-family: 'Playfair Display', serif;
+            color: var(--cream);
+            font-size: 18px;
+        }
+
+        .footer-name span {
+            color: var(--terra-light);
+            font-style: italic;
+        }
+
+        .footer-tag {
+            font-family: 'Jost', sans-serif;
+            font-size: 9px;
+            letter-spacing: .25em;
+            color: var(--terra-pale);
+            text-transform: uppercase;
+        }
+
+        .footer-contact {
+            font-family: 'Jost', sans-serif;
+            font-size: 10px;
+            color: var(--terra-pale);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="page">
+
+        <!-- COVER -->
+        <div class="cover">
+            <div class="cover-text">
+                <div class="cover-label">Manual de Identidade Visual</div>
+                <div class="cover-title">Thê<span>-lie</span></div>
+                <div class="cover-sub">Cerâmico · Coxim-MS</div>
+                <div class="cover-brand-desc">Artesanato em cerâmica com alma brasileira — peças que carregam a terra, o
+                    tempo e a tradição.</div>
+            </div>
+            <div class="cover-decor">
+                <div class="cover-circle">
+                    <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg"
+                        style="margin-bottom:6px;opacity:.25">
+                        <path d="M10 25 C10 15 20 8 25 5 C30 8 40 15 40 25 C40 35 32 42 25 45 C18 42 10 35 10 25Z"
+                            fill="#8B4513" opacity=".3" />
+                        <path d="M10 25 C10 15 20 8 25 5" stroke="#8B4513" stroke-width="1" fill="none" />
+                    </svg>
+                    <div class="cover-circle-name">Thê-lie</div>
+                    <div class="cover-circle-sub">Cerâmico</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 1. LOGOS -->
+        <div class="section">
+            <div class="section-header">
+                <span class="section-num">01</span>
+                <span class="section-title">Logos & Variações</span>
+                <div class="section-line"></div>
+            </div>
+            <div class="logos-grid">
+
+                <!-- Logo principal circular -->
+                <div class="logo-card">
+                    <span class="logo-card-label">Logo Principal</span>
+                    <svg class="logo-main-svg" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                        <!-- outer ring -->
+                        <circle cx="100" cy="100" r="95" fill="#F5ECD7" stroke="#A0522D" stroke-width="3" />
+                        <circle cx="100" cy="100" r="88" fill="none" stroke="#A0522D" stroke-width="0.8" opacity=".5" />
+                        <!-- olive left -->
+                        <g transform="translate(18,80) rotate(-15)">
+                            <line x1="0" y1="40" x2="0" y2="0" stroke="#8B8B4A" stroke-width="1.2" />
+                            <ellipse cx="-5" cy="32" rx="4" ry="7" fill="#8B8B4A" opacity=".7"
+                                transform="rotate(-20,-5,32)" />
+                            <ellipse cx="5" cy="24" rx="4" ry="7" fill="#8B8B4A" opacity=".7"
+                                transform="rotate(20,5,24)" />
+                            <ellipse cx="-5" cy="16" rx="4" ry="6" fill="#8B8B4A" opacity=".7"
+                                transform="rotate(-20,-5,16)" />
+                            <ellipse cx="4" cy="8" rx="3" ry="5" fill="#8B8B4A" opacity=".7"
+                                transform="rotate(15,4,8)" />
+                        </g>
+                        <!-- olive right -->
+                        <g transform="translate(182,80) rotate(15)">
+                            <line x1="0" y1="40" x2="0" y2="0" stroke="#8B8B4A" stroke-width="1.2" />
+                            <ellipse cx="5" cy="32" rx="4" ry="7" fill="#8B8B4A" opacity=".7"
+                                transform="rotate(20,5,32)" />
+                            <ellipse cx="-5" cy="24" rx="4" ry="7" fill="#8B8B4A" opacity=".7"
+                                transform="rotate(-20,-5,24)" />
+                            <ellipse cx="5" cy="16" rx="4" ry="6" fill="#8B8B4A" opacity=".7"
+                                transform="rotate(20,5,16)" />
+                            <ellipse cx="-4" cy="8" rx="3" ry="5" fill="#8B8B4A" opacity=".7"
+                                transform="rotate(-15,-4,8)" />
+                        </g>
+                        <!-- jug silhouette -->
+                        <ellipse cx="100" cy="72" rx="28" ry="8" fill="#D4956A" opacity=".18" />
+                        <path
+                            d="M80 90 Q75 80 78 68 Q82 58 100 55 Q118 58 122 68 Q125 80 120 90 Q118 110 115 125 Q112 138 100 140 Q88 138 85 125 Q82 110 80 90Z"
+                            fill="#C47848" opacity=".85" />
+                        <path d="M122 68 Q132 65 135 75 Q135 85 125 88" fill="none" stroke="#A0522D" stroke-width="2.5"
+                            stroke-linecap="round" />
+                        <path d="M78 68 Q75 70 76 80" fill="none" stroke="#A0522A" stroke-width="1.5" opacity=".5" />
+                        <!-- spout -->
+                        <path d="M100 55 Q103 50 110 48 Q115 47 116 50" fill="none" stroke="#A0522D" stroke-width="2"
+                            stroke-linecap="round" />
+                        <!-- twine -->
+                        <path d="M89 90 Q100 87 111 90" stroke="#8B6914" stroke-width="1.5" fill="none" />
+                        <!-- fish dangles -->
+                        <ellipse cx="98" cy="106" rx="5" ry="3" fill="#8B4513" opacity=".7"
+                            transform="rotate(-10,98,106)" />
+                        <ellipse cx="103" cy="113" rx="4" ry="2.5" fill="#8B4513" opacity=".7"
+                            transform="rotate(5,103,113)" />
+                        <ellipse cx="96" cy="119" rx="4" ry="2.5" fill="#8B4513" opacity=".6"
+                            transform="rotate(-5,96,119)" />
+                        <!-- text -->
+                        <text x="100" y="158" text-anchor="middle" font-family="Playfair Display, serif" font-size="22"
+                            fill="#3D1C0A" font-weight="600">Thê-lie</text>
+                        <text x="100" y="172" text-anchor="middle" font-family="Jost, sans-serif" font-size="9"
+                            fill="#A0522D" letter-spacing="5">CERÂMICO</text>
+                        <!-- dots -->
+                        <circle cx="64" cy="157" r="2" fill="#A0522D" />
+                        <circle cx="136" cy="157" r="2" fill="#A0522D" />
+                        <!-- location -->
+                        <text x="100" y="185" text-anchor="middle" font-family="Jost, sans-serif" font-size="7"
+                            fill="#A0522D" letter-spacing="2">COXIM · MS</text>
+                    </svg>
+                </div>
+
+                <!-- Variação horizontal -->
+                <div class="logo-card">
+                    <span class="logo-card-label">Variação Horizontal</span>
+                    <svg class="logo-horiz-svg" viewBox="0 0 280 90" xmlns="http://www.w3.org/2000/svg">
+                        <!-- circle icon -->
+                        <circle cx="45" cy="45" r="40" fill="#F5ECD7" stroke="#A0522D" stroke-width="2" />
+                        <circle cx="45" cy="45" r="34" fill="none" stroke="#A0522D" stroke-width="0.6" opacity=".5" />
+                        <!-- mini jug -->
+                        <path
+                            d="M32 52 Q30 44 32 38 Q35 32 45 30 Q55 32 58 38 Q60 44 58 52 Q56 60 52 64 Q45 67 38 64 Q34 60 32 52Z"
+                            fill="#C47848" opacity=".85" />
+                        <path d="M58 38 Q66 35 67 43 Q67 50 60 52" fill="none" stroke="#A0522D" stroke-width="2"
+                            stroke-linecap="round" />
+                        <path d="M45 30 Q48 27 52 26" fill="none" stroke="#A0522D" stroke-width="1.5"
+                            stroke-linecap="round" />
+                        <ellipse cx="47" cy="54" rx="2.5" ry="1.5" fill="#8B4513" opacity=".7"
+                            transform="rotate(-10,47,54)" />
+                        <ellipse cx="50" cy="58" rx="2" ry="1.5" fill="#8B4513" opacity=".6"
+                            transform="rotate(5,50,58)" />
+                        <!-- text right -->
+                        <text x="97" y="36" text-anchor="middle" font-family="Playfair Display, serif" font-size="30"
+                            fill="#3D1C0A" font-weight="600">Thê-lie</text>
+                        <text x="97" y="52" text-anchor="middle" font-family="Jost, sans-serif" font-size="9"
+                            fill="#A0522D" letter-spacing="5">CERÂMICO</text>
+                        <line x1="72" y1="58" x2="122" y2="58" stroke="#A0522D" stroke-width="0.6" opacity=".4" />
+                        <text x="97" y="69" text-anchor="middle" font-family="Jost, sans-serif" font-size="7"
+                            fill="#A0522D" letter-spacing="2">COXIM · MS</text>
+                    </svg>
+                </div>
+
+                <!-- Ícone simplificado -->
+                <div class="logo-card">
+                    <span class="logo-card-label">Ícone / Favicon</span>
+                    <svg class="logo-icon-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="50" cy="50" r="48" fill="#3D1C0A" stroke="#A0522D" stroke-width="2" />
+                        <circle cx="50" cy="50" r="42" fill="none" stroke="#A0522D" stroke-width="0.6" opacity=".5" />
+                        <path
+                            d="M33 58 Q31 49 33 41 Q37 33 50 30 Q63 33 67 41 Q69 49 67 58 Q64 67 58 71 Q50 74 42 71 Q36 67 33 58Z"
+                            fill="#C47848" />
+                        <path d="M67 41 Q76 38 77 47 Q77 55 68 58" fill="none" stroke="#D4956A" stroke-width="2.5"
+                            stroke-linecap="round" />
+                        <path d="M50 30 Q54 26 58 25" fill="none" stroke="#D4956A" stroke-width="2"
+                            stroke-linecap="round" />
+                        <ellipse cx="52" cy="61" rx="3" ry="2" fill="#8B4513" opacity=".8"
+                            transform="rotate(-10,52,61)" />
+                        <ellipse cx="56" cy="66" rx="2.5" ry="1.8" fill="#8B4513" opacity=".7"
+                            transform="rotate(5,56,66)" />
+                        <text x="50" y="88" text-anchor="middle" font-family="Jost, sans-serif" font-size="7"
+                            fill="#D4956A" letter-spacing="3">TL</text>
+                    </svg>
+                </div>
+
+            </div>
+
+            <!-- Dark bg variants row -->
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:24px;">
+                <div class="logo-card dark-bg">
+                    <span class="logo-card-label" style="color:var(--terra-light)">Versão Fundo Escuro</span>
+                    <svg viewBox="0 0 280 90" width="260" height="90" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="45" cy="45" r="40" fill="#3D1C0A" stroke="#C47848" stroke-width="2" />
+                        <circle cx="45" cy="45" r="34" fill="none" stroke="#C47848" stroke-width="0.6" opacity=".5" />
+                        <path
+                            d="M32 52 Q30 44 32 38 Q35 32 45 30 Q55 32 58 38 Q60 44 58 52 Q56 60 52 64 Q45 67 38 64 Q34 60 32 52Z"
+                            fill="#C47848" opacity=".9" />
+                        <path d="M58 38 Q66 35 67 43 Q67 50 60 52" fill="none" stroke="#D4956A" stroke-width="2"
+                            stroke-linecap="round" />
+                        <path d="M45 30 Q48 27 52 26" fill="none" stroke="#D4956A" stroke-width="1.5"
+                            stroke-linecap="round" />
+                        <ellipse cx="47" cy="54" rx="2.5" ry="1.5" fill="#8B4513" opacity=".8"
+                            transform="rotate(-10,47,54)" />
+                        <text x="97" y="36" text-anchor="middle" font-family="Playfair Display, serif" font-size="30"
+                            fill="#F5ECD7" font-weight="600">Thê-lie</text>
+                        <text x="97" y="52" text-anchor="middle" font-family="Jost, sans-serif" font-size="9"
+                            fill="#C47848" letter-spacing="5">CERÂMICO</text>
+                        <line x1="72" y1="58" x2="122" y2="58" stroke="#C47848" stroke-width="0.6" opacity=".4" />
+                        <text x="97" y="69" text-anchor="middle" font-family="Jost, sans-serif" font-size="7"
+                            fill="#C47848" letter-spacing="2">COXIM · MS</text>
+                    </svg>
+                </div>
+                <div class="logo-card" style="background:var(--terra);">
+                    <span class="logo-card-label" style="color:var(--cream)">Versão Fundo Terra</span>
+                    <svg viewBox="0 0 280 90" width="260" height="90" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="45" cy="45" r="40" fill="rgba(245,236,215,.15)" stroke="#F5ECD7" stroke-width="2" />
+                        <circle cx="45" cy="45" r="34" fill="none" stroke="#F5ECD7" stroke-width="0.6" opacity=".5" />
+                        <path
+                            d="M32 52 Q30 44 32 38 Q35 32 45 30 Q55 32 58 38 Q60 44 58 52 Q56 60 52 64 Q45 67 38 64 Q34 60 32 52Z"
+                            fill="#F5ECD7" opacity=".6" />
+                        <path d="M58 38 Q66 35 67 43 Q67 50 60 52" fill="none" stroke="#F5ECD7" stroke-width="2"
+                            stroke-linecap="round" />
+                        <path d="M45 30 Q48 27 52 26" fill="none" stroke="#F5ECD7" stroke-width="1.5"
+                            stroke-linecap="round" />
+                        <text x="97" y="36" text-anchor="middle" font-family="Playfair Display, serif" font-size="30"
+                            fill="#F5ECD7" font-weight="600">Thê-lie</text>
+                        <text x="97" y="52" text-anchor="middle" font-family="Jost, sans-serif" font-size="9"
+                            fill="rgba(245,236,215,.8)" letter-spacing="5">CERÂMICO</text>
+                        <text x="97" y="69" text-anchor="middle" font-family="Jost, sans-serif" font-size="7"
+                            fill="rgba(245,236,215,.7)" letter-spacing="2">COXIM · MS</text>
+                    </svg>
+                </div>
+            </div>
+        </div>
+
+        <!-- 2. PALETTE -->
+        <div class="section">
+            <div class="section-header">
+                <span class="section-num">02</span>
+                <span class="section-title">Paleta de Cores</span>
+                <div class="section-line"></div>
+            </div>
+            <!-- Primary -->
+            <div
+                style="font-family:'Jost',sans-serif;font-size:9px;letter-spacing:.25em;color:var(--terra-light);text-transform:uppercase;margin-bottom:8px;">
+                Cores Primárias</div>
+            <div class="palette-row">
+                <div class="swatch light-text" style="background:#3D1C0A;">
+                    <div class="swatch-name">Café Escuro</div>
+                    <div class="swatch-hex">#3D1C0A</div>
+                </div>
+                <div class="swatch light-text" style="background:#8B4513;">
+                    <div class="swatch-name">Terra</div>
+                    <div class="swatch-hex">#8B4513</div>
+                </div>
+                <div class="swatch light-text" style="background:#A0522D;">
+                    <div class="swatch-name">Sienna</div>
+                    <div class="swatch-hex">#A0522D</div>
+                </div>
+                <div class="swatch light-text" style="background:#C47848;">
+                    <div class="swatch-name">Terra Clara</div>
+                    <div class="swatch-hex">#C47848</div>
+                </div>
+                <div class="swatch dark-text" style="background:#D4956A;">
+                    <div class="swatch-name">Argila</div>
+                    <div class="swatch-hex">#D4956A</div>
+                </div>
+            </div>
+            <!-- Secondary -->
+            <div
+                style="font-family:'Jost',sans-serif;font-size:9px;letter-spacing:.25em;color:var(--terra-light);text-transform:uppercase;margin-bottom:8px;margin-top:16px;">
+                Cores Secundárias</div>
+            <div class="palette-row">
+                <div class="swatch dark-text" style="background:#F5ECD7;">
+                    <div class="swatch-name">Creme</div>
+                    <div class="swatch-hex">#F5ECD7</div>
+                </div>
+                <div class="swatch dark-text" style="background:#FAF4E8;">
+                    <div class="swatch-name">Marfim</div>
+                    <div class="swatch-hex">#FAF4E8</div>
+                </div>
+                <div class="swatch light-text" style="background:#B8860B;">
+                    <div class="swatch-name">Ouro</div>
+                    <div class="swatch-hex">#B8860B</div>
+                </div>
+                <div class="swatch light-text" style="background:#6B6B3A;">
+                    <div class="swatch-name">Oliva</div>
+                    <div class="swatch-hex">#6B6B3A</div>
+                </div>
+                <div class="swatch dark-text" style="background:#8B8B4A;">
+                    <div class="swatch-name">Folha</div>
+                    <div class="swatch-hex">#8B8B4A</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3. TYPOGRAPHY -->
+        <div class="section">
+            <div class="section-header">
+                <span class="section-num">03</span>
+                <span class="section-title">Tipografia</span>
+                <div class="section-line"></div>
+            </div>
+            <div class="typo-grid">
+                <div class="typo-card">
+                    <div class="typo-role">Fonte Principal · Display</div>
+                    <div class="typo-display">Playfair Display</div>
+                    <div
+                        style="font-family:'Playfair Display',serif;font-style:italic;font-size:24px;color:var(--terra-mid);margin-top:4px;">
+                        Artesanato de Alma</div>
+                    <div class="typo-meta">ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>abcdefghijklmnopqrstuvwxyz · 0123456789</div>
+                    <div class="typo-meta" style="margin-top:8px;">Pesos: Regular · SemiBold · Bold · Italic</div>
+                </div>
+                <div class="typo-card">
+                    <div class="typo-role">Fonte Secundária · Serif Elegante</div>
+                    <div class="typo-serif">Cormorant Garamond</div>
+                    <div
+                        style="font-family:'Cormorant Garamond',serif;font-size:16px;color:var(--terra-mid);margin-top:6px;line-height:1.6;">
+                        "A cerâmica é a escrita<br>da terra." — Artesã
+                    </div>
+                    <div class="typo-meta" style="margin-top:12px;">Pesos: Light · Regular · SemiBold · Italic</div>
+                </div>
+                <div class="typo-card" style="grid-column:1/-1;">
+                    <div class="typo-role">Fonte Auxiliar · Sans-serif</div>
+                    <div class="typo-sans">JOST — INFORMAÇÕES · CONTATO · ENDEREÇO · ETIQUETAS</div>
+                    <div style="display:flex;gap:24px;margin-top:12px;flex-wrap:wrap;">
+                        <span
+                            style="font-family:'Jost',sans-serif;font-weight:300;font-size:13px;color:var(--terra-mid)">Light
+                            — textos corridos</span>
+                        <span
+                            style="font-family:'Jost',sans-serif;font-weight:400;font-size:13px;color:var(--terra-mid)">Regular
+                            — labels</span>
+                        <span
+                            style="font-family:'Jost',sans-serif;font-weight:500;font-size:13px;color:var(--terra-mid)">Medium
+                            — destaques</span>
+                    </div>
+                    <div class="typo-meta" style="margin-top:8px;">Uso: legendas, informações de contato, etiquetas,
+                        navegação, botões</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 4. ELEMENTS -->
+        <div class="section">
+            <div class="section-header">
+                <span class="section-num">04</span>
+                <span class="section-title">Elementos Gráficos</span>
+                <div class="section-line"></div>
+            </div>
+            <div class="elements-grid">
+                <!-- Olive branch -->
+                <div class="elem-card">
+                    <svg width="80" height="100" viewBox="0 0 80 100" xmlns="http://www.w3.org/2000/svg">
+                        <line x1="40" y1="95" x2="40" y2="5" stroke="#8B8B4A" stroke-width="1.5" />
+                        <ellipse cx="28" cy="80" rx="8" ry="14" fill="#8B8B4A" opacity=".7"
+                            transform="rotate(-25,28,80)" />
+                        <ellipse cx="52" cy="65" rx="8" ry="13" fill="#8B8B4A" opacity=".7"
+                            transform="rotate(20,52,65)" />
+                        <ellipse cx="25" cy="50" rx="7" ry="12" fill="#8B8B4A" opacity=".65"
+                            transform="rotate(-20,25,50)" />
+                        <ellipse cx="54" cy="36" rx="7" ry="11" fill="#8B8B4A" opacity=".65"
+                            transform="rotate(18,54,36)" />
+                        <ellipse cx="28" cy="22" rx="6" ry="10" fill="#8B8B4A" opacity=".6"
+                            transform="rotate(-15,28,22)" />
+                        <ellipse cx="50" cy="10" rx="5" ry="8" fill="#8B8B4A" opacity=".55"
+                            transform="rotate(12,50,10)" />
+                    </svg>
+                    <div class="elem-label">Ramo de Oliva</div>
+                </div>
+                <!-- Ornamental divider -->
+                <div class="elem-card">
+                    <svg width="200" height="40" viewBox="0 0 200 40" xmlns="http://www.w3.org/2000/svg">
+                        <line x1="0" y1="20" x2="72" y2="20" stroke="#A0522D" stroke-width="0.8" opacity=".5" />
+                        <line x1="128" y1="20" x2="200" y2="20" stroke="#A0522D" stroke-width="0.8" opacity=".5" />
+                        <circle cx="100" cy="20" r="6" fill="none" stroke="#A0522D" stroke-width="1.2" />
+                        <circle cx="100" cy="20" r="2" fill="#A0522D" />
+                        <circle cx="82" cy="20" r="2" fill="#A0522D" opacity=".5" />
+                        <circle cx="118" cy="20" r="2" fill="#A0522D" opacity=".5" />
+                        <path d="M92 12 L96 20 L92 28" fill="none" stroke="#A0522D" stroke-width="0.8" opacity=".4" />
+                        <path d="M108 12 L104 20 L108 28" fill="none" stroke="#A0522D" stroke-width="0.8"
+                            opacity=".4" />
+                    </svg>
+                    <div class="elem-label">Divisor Ornamental</div>
+                </div>
+                <!-- Fish motif -->
+                <div class="elem-card">
+                    <svg width="140" height="80" viewBox="0 0 140 80" xmlns="http://www.w3.org/2000/svg">
+                        <g transform="translate(20,20)">
+                            <ellipse cx="20" cy="20" rx="20" ry="13" fill="#C47848" opacity=".8" />
+                            <path d="M40 20 L55 10 L52 20 L55 30Z" fill="#C47848" opacity=".8" />
+                            <circle cx="8" cy="16" r="2.5" fill="#8B4513" />
+                            <line x1="15" y1="10" x2="15" y2="30" stroke="#A0522D" stroke-width="0.8" opacity=".4" />
+                            <line x1="25" y1="8" x2="25" y2="32" stroke="#A0522D" stroke-width="0.8" opacity=".4" />
+                            <line x1="35" y1="10" x2="35" y2="30" stroke="#A0522D" stroke-width="0.8" opacity=".4" />
+                        </g>
+                        <g transform="translate(72,30) scale(.65)">
+                            <ellipse cx="20" cy="20" rx="20" ry="13" fill="#A0522D" opacity=".7" />
+                            <path d="M40 20 L55 10 L52 20 L55 30Z" fill="#A0522D" opacity=".7" />
+                            <circle cx="8" cy="16" r="2.5" fill="#5C2E0A" />
+                        </g>
+                        <g transform="translate(95,14) scale(.5)">
+                            <ellipse cx="20" cy="20" rx="20" ry="13" fill="#8B4513" opacity=".6" />
+                            <path d="M40 20 L55 10 L52 20 L55 30Z" fill="#8B4513" opacity=".6" />
+                            <circle cx="8" cy="16" r="2.5" fill="#3D1C0A" />
+                        </g>
+                    </svg>
+                    <div class="elem-label">Peixinhos de Argila</div>
+                </div>
+                <!-- Texture dot -->
+                <div class="elem-card">
+                    <svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="50" cy="50" r="45" fill="#F5ECD7" stroke="#A0522D" stroke-width="2" />
+                        <circle cx="50" cy="50" r="38" fill="none" stroke="#A0522D" stroke-width="0.8" opacity=".4" />
+                        <circle cx="50" cy="50" r="30" fill="none" stroke="#A0522D" stroke-width="0.5" opacity=".25" />
+                        <circle cx="50" cy="50" r="4" fill="#A0522D" />
+                        <circle cx="26" cy="50" r="2" fill="#A0522D" opacity=".5" />
+                        <circle cx="74" cy="50" r="2" fill="#A0522D" opacity=".5" />
+                        <circle cx="50" cy="26" r="2" fill="#A0522D" opacity=".5" />
+                        <circle cx="50" cy="74" r="2" fill="#A0522D" opacity=".5" />
+                    </svg>
+                    <div class="elem-label">Selo Circular</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 5. APPLICATIONS -->
+        <div class="section">
+            <div class="section-header">
+                <span class="section-num">05</span>
+                <span class="section-title">Aplicações da Marca</span>
+                <div class="section-line"></div>
+            </div>
+            <div class="apps-grid">
+
+                <!-- Business card -->
+                <div class="app-card">
+                    <div class="app-card-label">Cartão de Visita</div>
+                    <div class="app-card-body">
+                        <div class="biz-card">
+                            <div>
+                                <div class="biz-name">Thê<span>-lie</span></div>
+                                <div class="biz-ceramico">Cerâmico</div>
+                            </div>
+                            <div>
+                                <div class="biz-sep" style="margin-bottom:10px;"></div>
+                                <div class="biz-contact">
+                                    📍 Coxim, MS<br>
+                                    📱 67 999 424 835<br>
+                                    @thelie.ceramico
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Back -->
+                        <div class="biz-card"
+                            style="margin-top:12px;background:var(--brown-dark);justify-content:center;align-items:center;">
+                            <svg width="80" height="80" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="50" cy="50" r="46" fill="none" stroke="#C47848" stroke-width="1.5" />
+                                <circle cx="50" cy="50" r="40" fill="none" stroke="#C47848" stroke-width="0.6"
+                                    opacity=".5" />
+                                <path
+                                    d="M33 58 Q31 49 33 41 Q37 33 50 30 Q63 33 67 41 Q69 49 67 58 Q64 67 58 71 Q50 74 42 71 Q36 67 33 58Z"
+                                    fill="#C47848" opacity=".7" />
+                                <path d="M67 41 Q76 38 77 47 Q77 55 68 58" fill="none" stroke="#D4956A" stroke-width="2"
+                                    stroke-linecap="round" />
+                                <path d="M50 30 Q54 26 58 25" fill="none" stroke="#D4956A" stroke-width="2"
+                                    stroke-linecap="round" />
+                                <ellipse cx="52" cy="61" rx="3" ry="2" fill="#8B4513" opacity=".8" />
+                                <ellipse cx="56" cy="66" rx="2.5" ry="1.8" fill="#8B4513" opacity=".7" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Letterhead -->
+                <div class="app-card">
+                    <div class="app-card-label">Papel Timbrado</div>
+                    <div class="app-card-body">
+                        <div class="letterhead">
+                            <div class="lh-header">
+                                <div>
+                                    <div class="lh-name">Thê<span>-lie</span></div>
+                                    <div class="lh-sub">Cerâmico · Artesanato em Barro</div>
+                                </div>
+                                <svg width="44" height="44" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="50" cy="50" r="46" fill="none" stroke="#C47848" stroke-width="2" />
+                                    <path
+                                        d="M33 58 Q31 49 33 41 Q37 33 50 30 Q63 33 67 41 Q69 49 67 58 Q64 67 58 71 Q50 74 42 71 Q36 67 33 58Z"
+                                        fill="#C47848" opacity=".7" />
+                                    <path d="M67 41 Q76 38 77 47 Q77 55 68 58" fill="none" stroke="#D4956A"
+                                        stroke-width="2" stroke-linecap="round" />
+                                </svg>
+                            </div>
+                            <div class="lh-body">
+                                <div class="lh-date">Coxim, 08 de maio de 2026</div>
+                                <div class="lh-line"></div>
+                                <div class="lh-text-block" style="gap:6px;">
+                                    <div class="lh-text" style="width:100%"></div>
+                                    <div class="lh-text" style="width:92%"></div>
+                                    <div class="lh-text" style="width:88%"></div>
+                                    <div class="lh-text" style="width:95%"></div>
+                                    <div class="lh-text" style="width:60%"></div>
+                                </div>
+                                <div class="lh-line" style="margin-top:14px;"></div>
+                                <div class="lh-text-block" style="gap:6px;margin-top:8px;">
+                                    <div class="lh-text" style="width:100%"></div>
+                                    <div class="lh-text" style="width:80%"></div>
+                                </div>
+                            </div>
+                            <div class="lh-footer">
+                                <span>📍 Coxim, MS</span>
+                                <span>📱 67 999 424 835</span>
+                                <span>@thelie.ceramico</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Instagram -->
+                <div class="app-card">
+                    <div class="app-card-label">Post Instagram</div>
+                    <div class="app-card-body">
+                        <div class="insta-post">
+                            <!-- olive decorations -->
+                            <svg width="50" height="70" viewBox="0 0 50 70"
+                                style="position:absolute;left:12px;top:50%;transform:translateY(-50%);opacity:.35">
+                                <line x1="25" y1="65" x2="25" y2="5" stroke="#8B8B4A" stroke-width="1.2" />
+                                <ellipse cx="14" cy="52" rx="6" ry="10" fill="#8B8B4A" transform="rotate(-20,14,52)" />
+                                <ellipse cx="36" cy="38" rx="6" ry="10" fill="#8B8B4A" transform="rotate(20,36,38)" />
+                                <ellipse cx="14" cy="24" rx="5" ry="8" fill="#8B8B4A" transform="rotate(-15,14,24)" />
+                                <ellipse cx="34" cy="12" rx="4" ry="7" fill="#8B8B4A" transform="rotate(15,34,12)" />
+                            </svg>
+                            <svg width="50" height="70" viewBox="0 0 50 70"
+                                style="position:absolute;right:12px;top:50%;transform:translateY(-50%) scaleX(-1);opacity:.35">
+                                <line x1="25" y1="65" x2="25" y2="5" stroke="#8B8B4A" stroke-width="1.2" />
+                                <ellipse cx="14" cy="52" rx="6" ry="10" fill="#8B8B4A" transform="rotate(-20,14,52)" />
+                                <ellipse cx="36" cy="38" rx="6" ry="10" fill="#8B8B4A" transform="rotate(20,36,38)" />
+                                <ellipse cx="14" cy="24" rx="5" ry="8" fill="#8B8B4A" transform="rotate(-15,14,24)" />
+                                <ellipse cx="34" cy="12" rx="4" ry="7" fill="#8B8B4A" transform="rotate(15,34,12)" />
+                            </svg>
+                            <div class="insta-ring">
+                                <div class="insta-logo">Thê<span>-lie</span></div>
+                            </div>
+                            <div class="insta-tag">Cerâmico · Coxim-MS</div>
+                            <div class="insta-msg">Feito com terra,<br>entregue com amor.</div>
+                            <div
+                                style="margin-top:12px;font-family:'Jost',sans-serif;font-size:8px;letter-spacing:.18em;color:var(--terra-pale);text-transform:uppercase;z-index:1;">
+                                #ceramica #artesanato #barro</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Label + Facade -->
+                <div style="display:grid;grid-template-rows:1fr 1fr;gap:24px;">
+                    <!-- Label -->
+                    <div class="app-card">
+                        <div class="app-card-label">Etiqueta / Tag de Produto</div>
+                        <div class="app-card-body">
+                            <div class="label-wrap">
+                                <div class="product-label">
+                                    <div class="label-name">Thê<span>-lie</span></div>
+                                    <div class="label-sub">Cerâmico</div>
+                                    <div class="label-divider"></div>
+                                    <svg width="40" height="40" viewBox="0 0 50 50" style="margin-top:6px"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M12 30 Q11 24 12 18 Q15 12 25 10 Q35 12 38 18 Q39 24 38 30 Q36 36 30 38 Q25 40 20 38 Q14 36 12 30Z"
+                                            fill="#C47848" opacity=".7" />
+                                        <path d="M38 18 Q44 16 45 22 Q45 28 39 30" fill="none" stroke="#A0522D"
+                                            stroke-width="1.5" stroke-linecap="round" />
+                                        <path d="M25 10 Q28 7 31 6" fill="none" stroke="#A0522D" stroke-width="1.2"
+                                            stroke-linecap="round" />
+                                        <ellipse cx="27" cy="33" rx="2" ry="1.5" fill="#8B4513" opacity=".7" />
+                                        <ellipse cx="30" cy="36" rx="1.8" ry="1.3" fill="#8B4513" opacity=".6" />
+                                    </svg>
+                                    <div class="label-loc">📍 Coxim, MS</div>
+                                    <div class="label-loc" style="margin-top:2px;">67 999 424 835</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Facade -->
+                    <div class="app-card">
+                        <div class="app-card-label">Placa / Fachada</div>
+                        <div class="app-card-body">
+                            <div class="facade">
+                                <div class="facade-top">
+                                    <div class="facade-logo-sm">
+                                        <div class="facade-logo-sm-text">T·L</div>
+                                    </div>
+                                    <div class="facade-title-area">
+                                        <div class="facade-name">Thê<span>-lie</span></div>
+                                        <div class="facade-ceramico">Cerâmico</div>
+                                    </div>
+                                </div>
+                                <div class="facade-body">
+                                    <span class="facade-tag">Artesanato</span>
+                                    <span class="facade-tag">Barro & Cerâmica</span>
+                                    <span class="facade-tag">Peças Únicas</span>
+                                    <span class="facade-tag">Encomendas</span>
+                                </div>
+                                <div class="facade-contact-bar">
+                                    <span>📍 Coxim, MS</span>
+                                    <span>67 999 424 835</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- 6. BRAND GUIDE -->
+        <div class="section">
+            <div class="section-header">
+                <span class="section-num">06</span>
+                <span class="section-title">Guia de Uso da Marca</span>
+                <div class="section-line"></div>
+            </div>
+            <div class="guide-grid">
+                <div class="guide-card">
+                    <div class="guide-card-title">
+                        <div class="guide-dot" style="background:#6B9B37;"></div>Uso Correto ✓
+                    </div>
+                    <div class="guide-row">
+                        <div class="guide-thumb guide-ok"
+                            style="background:var(--cream);color:var(--brown-dark);font-size:13px;">Thê-lie</div>
+                        <div class="guide-desc">Logo sobre fundo creme ou branco — máxima legibilidade</div>
+                    </div>
+                    <div class="guide-row">
+                        <div class="guide-thumb guide-ok"
+                            style="background:var(--brown-dark);color:var(--cream);font-size:13px;">Thê-lie</div>
+                        <div class="guide-desc">Logo versão clara sobre fundo escuro</div>
+                    </div>
+                    <div class="guide-row">
+                        <div class="guide-thumb guide-ok"
+                            style="background:var(--terra);color:var(--cream);font-size:13px;">Thê-lie</div>
+                        <div class="guide-desc">Logo branco sobre cor terra — uso em embalagens</div>
+                    </div>
+                </div>
+                <div class="guide-card">
+                    <div class="guide-card-title">
+                        <div class="guide-dot" style="background:#C0392B;"></div>Uso Incorreto ✗
+                    </div>
+                    <div class="guide-row">
+                        <div class="guide-thumb guide-no" style="background:#4A90D9;color:white;font-size:13px;">Thê-lie
+                        </div>
+                        <div class="guide-desc">Nunca usar a marca sobre cores fora da paleta</div>
+                    </div>
+                    <div class="guide-row">
+                        <div class="guide-thumb guide-no"
+                            style="background:var(--cream);color:var(--brown-dark);font-size:13px;letter-spacing:4px;">
+                            Thê-lie</div>
+                        <div class="guide-desc">Não distorcer, esticar ou comprimir o logo</div>
+                    </div>
+                    <div class="guide-row">
+                        <div class="guide-thumb guide-no"
+                            style="background:var(--cream);color:var(--terra);font-size:9px;font-family:Arial;">Thê-lie
+                        </div>
+                        <div class="guide-desc">Não substituir a tipografia por fontes não autorizadas</div>
+                    </div>
+                </div>
+                <div class="guide-card">
+                    <div class="guide-card-title">
+                        <div class="guide-dot"></div>Zona de Proteção
+                    </div>
+                    <div
+                        style="background:var(--cream-light);border:1px dashed rgba(164,82,45,.3);border-radius:4px;padding:20px;display:flex;align-items:center;justify-content:center;gap:12px;">
+                        <div style="background:rgba(164,82,45,.08);padding:12px 20px;border-radius:4px;">
+                            <div style="font-family:'Playfair Display',serif;font-size:20px;color:var(--brown-dark);">
+                                Thê-lie</div>
+                            <div
+                                style="font-family:'Jost',sans-serif;font-size:7px;letter-spacing:.2em;color:var(--terra);text-transform:uppercase;">
+                                Cerâmico</div>
+                        </div>
+                    </div>
+                    <div class="guide-desc" style="margin-top:12px;">Mantenha sempre um espaço de proteção mínimo
+                        equivalente à altura da letra "T" ao redor do logo em todas as direções.</div>
+                </div>
+                <div class="guide-card">
+                    <div class="guide-card-title">
+                        <div class="guide-dot"></div>Tamanhos Mínimos
+                    </div>
+                    <div style="display:flex;gap:16px;align-items:flex-end;flex-wrap:wrap;">
+                        <div style="text-align:center;">
+                            <div style="font-family:'Playfair Display',serif;font-size:18px;color:var(--brown-dark);">
+                                Thê-lie</div>
+                            <div
+                                style="font-family:'Jost',sans-serif;font-size:7px;color:var(--terra-light);margin-top:4px;">
+                                Digital · 80px</div>
+                        </div>
+                        <div style="text-align:center;">
+                            <div style="font-family:'Playfair Display',serif;font-size:13px;color:var(--brown-dark);">
+                                Thê-lie</div>
+                            <div
+                                style="font-family:'Jost',sans-serif;font-size:7px;color:var(--terra-light);margin-top:4px;">
+                                Impresso · 15mm</div>
+                        </div>
+                        <div style="text-align:center;">
+                            <div style="font-family:'Playfair Display',serif;font-size:10px;color:var(--brown-dark);">TL
+                            </div>
+                            <div
+                                style="font-family:'Jost',sans-serif;font-size:7px;color:var(--terra-light);margin-top:4px;">
+                                Ícone · 24px</div>
+                        </div>
+                    </div>
+                    <div class="guide-desc" style="margin-top:12px;">Abaixo destes tamanhos, use apenas o monograma "TL"
+                        para garantir legibilidade.</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- FOOTER -->
+        <div class="footer-strip">
+            <div>
+                <div class="footer-name">Thê<span>-lie</span></div>
+                <div class="footer-tag">Cerâmico · Identidade Visual</div>
+            </div>
+            <div style="text-align:center;">
+                <div class="footer-tag" style="margin-bottom:4px;">Brand Board · 2026</div>
+                <div class="footer-contact">Coxim, Mato Grosso do Sul</div>
+            </div>
+            <div style="text-align:right;">
+                <div class="footer-contact">📱 67 999 424 835</div>
+                <div class="footer-contact">@thelie.ceramico</div>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>
