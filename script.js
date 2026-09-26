@@ -1,4 +1,12 @@
 (() => {
+    const staticPreview = ['localhost', '127.0.0.1'].includes(location.hostname)
+        && ['3000', '5500', '5501'].includes(location.port);
+    const liveLoginUrl = 'https://thelieceramico.com.br/index.html?login=1';
+    if (staticPreview && new URLSearchParams(location.search).has('login')) {
+        location.replace(liveLoginUrl);
+        return;
+    }
+
     const navbar = document.getElementById('navbar');
     const heroBg = document.getElementById('heroBg');
     const mobileMenu = document.getElementById('mobileMenu');
@@ -194,6 +202,7 @@
     };
 
     loginOpen?.addEventListener('click', async () => {
+        if (staticPreview) { location.assign(liveLoginUrl); return; }
         if (!loggedIn) { showLogin(); return; }
         try {
             const response = await fetch('/api/index.php?action=me', { credentials: 'same-origin', cache: 'no-store' });
@@ -218,6 +227,7 @@
 
     loginForm?.addEventListener('submit', async (event) => {
         event.preventDefault();
+        if (staticPreview) { location.assign(liveLoginUrl); return; }
         const button = loginForm.querySelector('button[type="submit"]');
         button.disabled = true;
         loginMessage.textContent = '';
