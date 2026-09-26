@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Painel · Thê-lie Cerâmico</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+    <header class="panel-header">
+        <a href="index.html" class="panel-brand">Thê<span>-lie</span><small>Cerâmico</small></a>
+        <div class="panel-header-right"><span id="headerName"></span><a href="conta.html">Minha conta</a><a href="index.html">Ver site ↗</a><button id="logoutButton" hidden>Sair</button></div>
+    </header>
+
+    <main>
+        <section class="dashboard" id="dashboardView" hidden style="display:none">
+            <div class="dashboard-heading"><p class="eyebrow">Painel de controle</p><h1>O ateliê, <em>nas suas mãos.</em></h1><p>Atualize as peças que aparecem no site e mantenha seus dados em dia.</p></div>
+            <div class="dashboard-layout">
+                <aside class="panel-sidebar" aria-label="Seções do painel">
+                    <span class="side-tab active">Galeria e Destaques</span>
+                </aside>
+
+                <div class="panel-main">
+                    <section class="panel-section">
+                        <div class="section-header"><div><p class="eyebrow">Acervo</p><h2>Galeria e Destaques</h2></div><span>Selecione uma peça para editar</span></div>
+                        <div class="editor-layout">
+                            <div class="product-list" id="productList"></div>
+                            <form id="productForm" class="editor-form" hidden>
+                                <div class="form-title"><div><p class="eyebrow" id="productSection"></p><h3 id="productHeading"></h3></div><span class="form-badge">Salvo no banco</span></div>
+                                <img id="productPreview" class="product-preview" alt="Prévia da foto atual">
+                                <label class="upload-label">Trocar foto JPG (até 5 MB)<input id="photoInput" name="photo" type="file" accept=".jpg,.jpeg,image/jpeg"></label>
+                                <p class="field-note">A foto será armazenada no banco de dados.</p>
+                                <div class="form-grid">
+                                    <label class="full">Nome da peça<input name="title" required maxlength="160"></label>
+                                    <label>Categoria<select name="category"><option value="escultura">Escultura</option><option value="animal">Animal de Barro</option><option value="vaso">Vaso</option></select></label>
+                                    <label>Texto da categoria<input name="kicker" required maxlength="120"></label>
+                                    <label class="full">Descrição<textarea name="description" rows="4" required maxlength="3000"></textarea></label>
+                                    <label class="full">Frase de destaque <small>(opcional)</small><textarea name="quote_text" rows="2" maxlength="1000"></textarea></label>
+                                    <label>Peso (g)<input name="weight_g" type="number" min="0" max="9999999" step="0.1" placeholder="Ex.: 850"></label>
+                                    <label>Largura (cm)<input name="width_cm" type="number" min="0" max="99999" step="0.1"></label>
+                                    <label>Altura (cm)<input name="height_cm" type="number" min="0" max="99999" step="0.1"></label>
+                                    <label>Profundidade (cm)<input name="depth_cm" type="number" min="0" max="99999" step="0.1"></label>
+                                    <label>Prazo de fabricação (dias)<input name="production_days" type="number" min="1" max="365" required value="30"></label>
+                                </div>
+                                <button type="submit" class="primary-button">Salvar alterações</button>
+                                <p class="form-message" id="productMessage" role="status"></p>
+                            </form>
+                        </div>
+                    </section>
+
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="admin.js"></script>
+</body>
+</html>

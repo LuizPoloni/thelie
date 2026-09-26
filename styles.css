@@ -1482,3 +1482,87 @@
         height: 44px;
     }
 }
+
+.nav-lock {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    color: var(--cream-light);
+    border: 1px solid currentColor;
+    border-radius: 50%;
+    background: transparent;
+    padding: 0;
+    opacity: .85;
+    cursor: pointer;
+    transition: color .25s, opacity .25s, transform .25s;
+}
+
+.nav-lock:hover { opacity: 1; transform: translateY(-2px); }
+nav.scrolled .nav-lock { color: var(--terra); }
+
+.galeria-img[role="button"], .destaque-img[role="button"] { cursor: pointer; }
+.galeria-img:focus-visible, .destaque-img:focus-visible, .nav-lock:focus-visible {
+    outline: 3px solid var(--gold);
+    outline-offset: 4px;
+}
+
+.product-modal[hidden] { display: none; }
+.login-modal[hidden] { display: none; }
+.login-modal { position: fixed; inset: 0; z-index: 12000; display: grid; place-items: center; padding: 18px; }
+.login-modal-backdrop { position: absolute; inset: 0; background: rgba(35, 18, 9, .78); }
+.login-modal-dialog { position: relative; width: min(440px, 100%); max-height: calc(100vh - 36px); overflow: auto; background: var(--cream-light); padding: clamp(30px, 5vw, 52px); box-shadow: 0 24px 90px rgba(20, 10, 4, .3); }
+.login-modal-close { position: absolute; top: 15px; right: 15px; width: 36px; height: 36px; border: 1px solid rgba(139, 69, 19, .25); border-radius: 50%; background: var(--cream-light); color: var(--terra); font-size: 25px; cursor: pointer; }
+.login-modal-dialog h2 { font: 500 48px/1 'Cormorant Garamond', serif; margin: 20px 0; }
+.login-modal-dialog h2 em { color: var(--terra-mid); font-weight: 400; }
+.login-modal-dialog > p:not(.section-eyebrow):not(.login-modal-message) { color: var(--brown-mid); font: 300 14px/1.6 'Jost', sans-serif; margin-bottom: 25px; }
+.login-modal-dialog label { display: block; color: var(--terra); font: 500 12px 'Jost', sans-serif; margin: 0 0 17px; }
+.login-modal-dialog input { display: block; width: 100%; margin-top: 8px; padding: 12px; border: 1px solid #e6d6c6; background: #fff; color: var(--brown-dark); font: 14px 'Jost', sans-serif; }
+.login-modal-dialog .btn-primary { width: 100%; border: 0; cursor: pointer; }
+.login-modal-dialog .btn-primary:disabled { opacity: .6; cursor: wait; }
+.login-modal-message { min-height: 1.4em; margin: 12px 0 0; color: #a42d20; font: 13px 'Jost', sans-serif; }
+#openPanelLink { display: inline-block; margin-top: 10px; color: var(--terra); font: 500 13px 'Jost', sans-serif; }
+#openPanelLink[hidden] { display: none; }
+.product-modal { position: fixed; inset: 0; z-index: 12000; display: grid; place-items: center; padding: 24px; }
+.product-modal-backdrop { position: absolute; inset: 0; background: rgba(35, 18, 9, .78); }
+.product-modal-dialog {
+    position: relative;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    width: min(900px, 100%);
+    max-height: min(760px, calc(100vh - 48px));
+    overflow: auto;
+    background: var(--cream-light);
+    box-shadow: 0 24px 90px rgba(20, 10, 4, .3);
+}
+.product-modal-close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    z-index: 1;
+    width: 38px;
+    height: 38px;
+    border: 1px solid rgba(139, 69, 19, .25);
+    border-radius: 50%;
+    background: var(--cream-light);
+    color: var(--terra);
+    font-size: 26px;
+    cursor: pointer;
+}
+.product-modal-image { width: 100%; height: 100%; min-height: 480px; object-fit: cover; }
+.product-modal-content { padding: clamp(30px, 5vw, 65px); align-self: center; }
+.product-modal-content h2 { font: 500 clamp(32px, 4vw, 48px)/1.1 'Cormorant Garamond', serif; margin: 20px 0; }
+.product-modal-content > p:not(.section-eyebrow) { font: 300 15px/1.8 'Jost', sans-serif; color: var(--brown-mid); }
+.product-modal-specs { margin: 28px 0; border-top: 1px solid rgba(139, 69, 19, .2); }
+.product-modal-specs div { display: flex; justify-content: space-between; gap: 18px; padding: 13px 0; border-bottom: 1px solid rgba(139, 69, 19, .2); font: 13px/1.5 'Jost', sans-serif; }
+.product-modal-specs dt { color: var(--terra-mid); }
+.product-modal-specs dd { text-align: right; color: var(--brown-dark); }
+
+@media (max-width: 900px) { .nav-lock { margin-left: auto; margin-right: 22px; } }
+@media (max-width: 620px) {
+    .product-modal { padding: 12px; }
+    .product-modal-dialog { grid-template-columns: 1fr; max-height: calc(100vh - 24px); }
+    .product-modal-image { min-height: 0; height: 260px; }
+    .product-modal-content { padding: 26px; }
+}

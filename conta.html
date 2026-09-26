@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Minha conta · Thê-lie Cerâmico</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+    <header class="panel-header">
+        <a href="index.html" class="panel-brand">Thê<span>-lie</span><small>Cerâmico</small></a>
+        <div class="panel-header-right"><span id="headerName"></span><a href="admin.html" id="adminLink" hidden>Galeria e Destaques</a><a href="index.html">Ver site ↗</a><button id="logoutButton" hidden>Sair</button></div>
+    </header>
+    <main id="accountView" class="dashboard account-page" hidden>
+        <div class="dashboard-heading"><p class="eyebrow">Seus dados</p><h1>Minha <em>conta.</em></h1><p>Atualize suas informações pessoais e sua senha.</p></div>
+        <div class="profile-grid">
+            <form id="profileForm" class="editor-form">
+                <h3>Informações pessoais</h3>
+                <label>Nome<input name="display_name" required maxlength="120"></label>
+                <label>Usuário<input name="username" disabled></label>
+                <label>E-mail<input name="email" type="email" maxlength="190"></label>
+                <label>Telefone<input name="phone" type="tel" maxlength="40"></label>
+                <button type="submit" class="primary-button">Salvar meus dados</button>
+                <p class="form-message" id="profileMessage" role="status"></p>
+            </form>
+            <form id="passwordForm" class="editor-form">
+                <h3>Alterar senha</h3>
+                <p class="field-note" id="passwordHint">Use uma senha de pelo menos 12 caracteres.</p>
+                <label>Senha atual<input name="current_password" type="password" autocomplete="current-password" required></label>
+                <label>Nova senha<input name="new_password" type="password" autocomplete="new-password" minlength="12" required></label>
+                <label>Confirmar nova senha<input name="confirm_password" type="password" autocomplete="new-password" minlength="12" required></label>
+                <button type="submit" class="primary-button">Alterar senha</button>
+                <p class="form-message" id="passwordMessage" role="status"></p>
+            </form>
+        </div>
+    </main>
+    <script src="conta.js"></script>
+</body>
+</html>

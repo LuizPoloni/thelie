@@ -9,6 +9,7 @@
         href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Jost:wght@300;400;500&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
 </head>
 
 <body>
@@ -38,6 +39,13 @@
             <li><a href="#contato">Contato</a></li>
         </ul>
         <a href="#encomendas" class="nav-cta">Encomendar</a>
+        <button type="button" class="nav-lock" id="loginOpen" aria-label="Entrar no painel" title="Entrar no painel">
+            <svg viewBox="0 0 24 24" width="19" height="19" fill="none" aria-hidden="true">
+                <rect x="5" y="10" width="14" height="11" rx="2" stroke="currentColor" stroke-width="1.7" />
+                <path d="M8 10V7a4 4 0 0 1 8 0v3" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" />
+                <circle cx="12" cy="15.5" r="1.2" fill="currentColor" />
+            </svg>
+        </button>
         <div class="hamburger" data-menu-toggle role="button" tabindex="0" aria-label="Abrir menu">
             <span></span><span></span><span></span>
         </div>
@@ -115,10 +123,10 @@
             <div class="galeria-grid" id="galeriaGrid">
 
                 <!-- Card 1 -->
-                <div class="galeria-card reveal" data-category="escultura">
+                <div class="galeria-card reveal" data-category="escultura" data-product="esculturas-organicas">
                     <div class="galeria-img">
                         <div class="galeria-img-inner">
-                            <img src="assets/the-lie/portfolio-esculturas.png"
+                            <img src="assets/the-lie/portfolio-esculturas.jpg"
                                 alt="Esculturas cerâmicas orgânicas em barro sobre tecido cru" loading="lazy"
                                 decoding="async">
                         </div>
@@ -132,10 +140,10 @@
                 </div>
 
                 <!-- Card 2 -->
-                <div class="galeria-card reveal reveal-delay-1" data-category="animal">
+                <div class="galeria-card reveal reveal-delay-1" data-category="animal" data-product="bichos-da-terra">
                     <div class="galeria-img">
                         <div class="galeria-img-inner">
-                            <img src="assets/the-lie/portfolio-animais-de-barro.png"
+                            <img src="assets/the-lie/portfolio-animais-de-barro.jpg"
                                 alt="Animais decorativos de barro modelados à mão" loading="lazy" decoding="async">
                         </div>
                     </div>
@@ -148,10 +156,10 @@
                 </div>
 
                 <!-- Card 3 -->
-                <div class="galeria-card reveal reveal-delay-2" data-category="vaso">
+                <div class="galeria-card reveal reveal-delay-2" data-category="vaso" data-product="vasos-de-atelie">
                     <div class="galeria-img">
                         <div class="galeria-img-inner">
-                            <img src="assets/the-lie/portfolio-vasos.png"
+                            <img src="assets/the-lie/portfolio-vasos.jpg"
                                 alt="Conjunto de vasos de barro artesanais em tons terrosos" loading="lazy"
                                 decoding="async">
                         </div>
@@ -165,10 +173,10 @@
                 </div>
 
                 <!-- Card 4 -->
-                <div class="galeria-card reveal reveal-delay-1" data-category="animal">
+                <div class="galeria-card reveal reveal-delay-1" data-category="animal" data-product="guardiao-galeria">
                     <div class="galeria-img">
                         <div class="galeria-img-inner">
-                            <img src="assets/the-lie/destaque-guardiao-de-barro.png"
+                            <img src="assets/the-lie/destaque-guardiao-de-barro.jpg"
                                 alt="Escultura de animal guardião em barro terracota" loading="lazy" decoding="async">
                         </div>
                     </div>
@@ -181,10 +189,10 @@
                 </div>
 
                 <!-- Card 5 -->
-                <div class="galeria-card reveal reveal-delay-2" data-category="vaso">
+                <div class="galeria-card reveal reveal-delay-2" data-category="vaso" data-product="anfora-galeria">
                     <div class="galeria-img">
                         <div class="galeria-img-inner">
-                            <img src="assets/the-lie/destaque-vaso-anfora-da-terra.png"
+                            <img src="assets/the-lie/destaque-vaso-anfora-da-terra.jpg"
                                 alt="Vaso ânfora de barro terracota com ramo de oliva" loading="lazy" decoding="async">
                         </div>
                     </div>
@@ -197,10 +205,10 @@
                 </div>
 
                 <!-- Card 6 -->
-                <div class="galeria-card reveal reveal-delay-3" data-category="escultura">
+                <div class="galeria-card reveal reveal-delay-3" data-category="escultura" data-product="terra-e-tempo-galeria">
                     <div class="galeria-img">
                         <div class="galeria-img-inner">
-                            <img src="assets/the-lie/destaque-escultura-terra-e-tempo.png"
+                            <img src="assets/the-lie/destaque-escultura-terra-e-tempo.jpg"
                                 alt="Escultura cerâmica abstrata em barro café e sienna" loading="lazy"
                                 decoding="async">
                         </div>
@@ -232,7 +240,7 @@
 
                 <div class="processo-step reveal">
                     <div class="processo-step-image">
-                        <img src="assets/the-lie/processo-modelagem.png"
+                        <img src="assets/the-lie/processo-modelagem.jpg"
                             alt="Mãos modelando barro úmido em uma bancada artesanal" loading="lazy" decoding="async">
                         <div class="processo-step-num">01</div>
                     </div>
@@ -243,7 +251,7 @@
 
                 <div class="processo-step reveal reveal-delay-1">
                     <div class="processo-step-image">
-                        <img src="assets/the-lie/processo-secagem.png"
+                        <img src="assets/the-lie/processo-secagem.jpg"
                             alt="Peças de barro descansando em prateleiras durante a secagem" loading="lazy"
                             decoding="async">
                         <div class="processo-step-num">02</div>
@@ -255,7 +263,7 @@
 
                 <div class="processo-step reveal reveal-delay-2">
                     <div class="processo-step-image">
-                        <img src="assets/the-lie/processo-acabamento.png"
+                        <img src="assets/the-lie/processo-acabamento.jpg"
                             alt="Acabamento manual em escultura cerâmica com ferramenta delicada" loading="lazy"
                             decoding="async">
                         <div class="processo-step-num">03</div>
@@ -267,7 +275,7 @@
 
                 <div class="processo-step reveal reveal-delay-3">
                     <div class="processo-step-image">
-                        <img src="assets/the-lie/processo-pintura-finalizacao.png"
+                        <img src="assets/the-lie/processo-pintura-finalizacao.jpg"
                             alt="Pincel aplicando pigmento terroso em vaso cerâmico artesanal" loading="lazy"
                             decoding="async">
                         <div class="processo-step-num">04</div>
@@ -293,10 +301,10 @@
             </div>
 
             <!-- Destaque 1 -->
-            <div class="destaque-item">
+            <div class="destaque-item" data-product="anfora-destaque">
                 <div class="destaque-img reveal">
                     <div class="destaque-img-inner">
-                        <img src="assets/the-lie/destaque-vaso-anfora-da-terra.png"
+                        <img src="assets/the-lie/destaque-vaso-anfora-da-terra.jpg"
                             alt="Vaso Ânfora da Terra em barro terracota sobre tecido cru" loading="lazy"
                             decoding="async">
                     </div>
@@ -314,10 +322,10 @@
             </div>
 
             <!-- Destaque 2 -->
-            <div class="destaque-item reverse">
+            <div class="destaque-item reverse" data-product="guardiao-destaque">
                 <div class="destaque-img reveal reveal-delay-1">
                     <div class="destaque-img-inner">
-                        <img src="assets/the-lie/destaque-guardiao-de-barro.png"
+                        <img src="assets/the-lie/destaque-guardiao-de-barro.jpg"
                             alt="Guardião de Barro, animal decorativo artesanal em terracota" loading="lazy"
                             decoding="async">
                     </div>
@@ -334,10 +342,10 @@
             </div>
 
             <!-- Destaque 3 -->
-            <div class="destaque-item">
+            <div class="destaque-item" data-product="terra-e-tempo-destaque">
                 <div class="destaque-img reveal reveal-delay-1">
                     <div class="destaque-img-inner">
-                        <img src="assets/the-lie/destaque-escultura-terra-e-tempo.png"
+                        <img src="assets/the-lie/destaque-escultura-terra-e-tempo.jpg"
                             alt="Escultura Terra e Tempo em barro escuro com abertura orgânica" loading="lazy"
                             decoding="async">
                     </div>
@@ -383,7 +391,7 @@
                         class="btn-cream reveal reveal-delay-3" target="_blank" rel="noopener">Solicitar Encomenda</a>
                 </div>
                 <figure class="encomendas-visual reveal reveal-delay-2">
-                    <img src="assets/the-lie/encomenda-personalizacao.png"
+                    <img src="assets/the-lie/encomenda-personalizacao.jpg"
                         alt="Mesa de ateliê com vaso, animal de barro, ferramentas e esboços para encomenda personalizada">
                 </figure>
             </div>
@@ -494,6 +502,42 @@
             </div>
         </div>
     </section>
+
+    <div class="login-modal" id="loginModal" hidden>
+        <div class="login-modal-backdrop" data-login-close></div>
+        <div class="login-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="loginTitle">
+            <button type="button" class="login-modal-close" data-login-close aria-label="Fechar login">×</button>
+            <p class="section-eyebrow">Acesso reservado</p>
+            <h2 id="loginTitle">Seu ateliê,<br><em>nas suas mãos.</em></h2>
+            <p>Entre para cuidar das peças e das suas informações.</p>
+            <form id="siteLoginForm">
+                <label>Usuário ou e-mail<input name="username" autocomplete="username" required></label>
+                <label>Senha<input name="password" type="password" autocomplete="current-password" required></label>
+                <button type="submit" class="btn-primary">Entrar no painel</button>
+            </form>
+            <p id="siteLoginMessage" class="login-modal-message" role="alert"></p>
+            <a id="openPanelLink" href="admin.html" target="_blank" rel="noopener" hidden>Abrir painel em nova aba ↗</a>
+        </div>
+    </div>
+
+    <div class="product-modal" id="productModal" hidden>
+        <div class="product-modal-backdrop" data-modal-close></div>
+        <div class="product-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+            <button type="button" class="product-modal-close" data-modal-close aria-label="Fechar detalhes">×</button>
+            <img id="modalImage" alt="" class="product-modal-image">
+            <div class="product-modal-content">
+                <p class="section-eyebrow" id="modalCategory"></p>
+                <h2 id="modalTitle"></h2>
+                <p id="modalDescription"></p>
+                <dl class="product-modal-specs">
+                    <div><dt>Peso</dt><dd id="modalWeight">A informar</dd></div>
+                    <div><dt>Medidas</dt><dd id="modalMeasures">A informar</dd></div>
+                    <div><dt>Prazo de fabricação</dt><dd id="modalLeadTime">30 dias</dd></div>
+                </dl>
+                <a href="#encomendas" class="btn-primary" data-modal-close>Encomendar uma peça</a>
+            </div>
+        </div>
+    </div>
 
     <!-- ═══════════════════ FOOTER ═══════════════════ -->
     <footer>
