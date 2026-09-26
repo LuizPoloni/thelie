@@ -513,12 +513,9 @@
 
         .sobre-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 80px;
-            align-items: center;
+            grid-template-columns: minmax(0, 760px);
+            justify-content: center;
         }
-
-        .sobre-text-block {}
 
         .sobre-body {
             font-family: 'Jost', sans-serif;
@@ -545,18 +542,6 @@
             border-left: 2px solid var(--terra-light);
             padding-left: 20px;
             margin-top: 28px;
-        }
-
-        .sobre-visual {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .sobre-seal {
-            width: clamp(300px, 30vw, 360px);
-            height: auto;
-            max-width: 100%;
         }
 
         /* ══════════════════════════════
@@ -1348,20 +1333,6 @@
 
             .hamburger {
                 display: flex;
-            }
-
-            .sobre-grid {
-                grid-template-columns: 1fr;
-                gap: 48px;
-            }
-
-            .sobre-visual {
-                order: -1;
-            }
-
-            .sobre-seal {
-                width: min(260px, 72vw);
-                height: auto;
             }
 
             .galeria-grid {
